@@ -226,13 +226,19 @@ public class DashBoardView extends BaseChart {
         /*画一个实心三角形*/
         float proAndle =  (endAngle - startAngle) * (progressAnim/total*1.0f);
         //以正东面为0度起点计算指定角度所对应的圆周上的点的坐标：
-        float endx = arcCenter.x + (float) (arcRaidus* Math.cos(Math.toRadians(startAngle+proAndle)));
-        float endy = arcCenter.y + (float) (arcRaidus* Math.sin(Math.toRadians(startAngle+proAndle)));
+        float centerArcX1 = arcCenter.x + (float) (centerPointSize* Math.cos(Math.toRadians(startAngle+proAndle - 90)));
+        float centerArcY1 = arcCenter.y + (float) (centerPointSize* Math.sin(Math.toRadians(startAngle+proAndle - 90)));
+
+        float endx2 = arcCenter.x + (float) (arcRaidus* Math.cos(Math.toRadians(startAngle+proAndle)));
+        float endy2 = arcCenter.y + (float) (arcRaidus* Math.sin(Math.toRadians(startAngle+proAndle)));
+
+        float centerArcX2 = arcCenter.x + (float) (centerPointSize* Math.cos(Math.toRadians(startAngle+proAndle + 90)));
+        float centerArcY2 = arcCenter.y + (float) (centerPointSize* Math.sin(Math.toRadians(startAngle+proAndle + 90)));
 
         Path path2=new Path();
-        path2.moveTo(arcCenter.x-centerPointSize,arcCenter.y);
-        path2.lineTo(endx,endy);
-        path2.lineTo(arcCenter.x+centerPointSize,arcCenter.y);
+        path2.moveTo(centerArcX1,centerArcY1);
+        path2.lineTo(endx2,endy2);
+        path2.lineTo(centerArcX2,centerArcY2);
         path2.close();
         canvas.drawPath(path2, paint);
 
