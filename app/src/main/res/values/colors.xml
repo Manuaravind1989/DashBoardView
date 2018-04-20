@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!--图表 chart-->
+    <color name="text_color_chart_coordinate">#939393</color>   <!--坐标字体大小-->
+    <color name="text_color_chart_tag">#939393</color>          <!--指标字体大小-->
+    <color name="text_color_chart_lable">#939393</color>        <!--字体大小-->
+</resources>

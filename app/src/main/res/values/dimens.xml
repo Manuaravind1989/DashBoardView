@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--chart-->
+    <dimen name="text_size_chart_coordinate">10sp</dimen>
+    <dimen name="text_size_chart_tag">10sp</dimen>
+    <dimen name="text_size_chart_lable">10sp</dimen>
+
+</resources>
